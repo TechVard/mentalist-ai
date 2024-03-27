@@ -9,14 +9,14 @@ export function Footer() {
 					{/* <Icons.logo /> */}
 					<IconComponent name='logo' className='w-5 h-5' />
 					<p className='text-center text-sm leading-loose md:text-left'>
-						Powered by{' '}
+					created with love by{' '}
 						<Link
-							href='https://platform.openai.com/'
+							href='https://techvard.ch/'
 							target='_blank'
 							rel='noreferrer'
 							className='font-medium underline underline-offset-4'
 						>
-							Open AI
+							TechVard school
 						</Link>
 						. Hosted on{' '}
 						<Link
@@ -29,7 +29,7 @@ export function Footer() {
 						</Link>
 					</p>
 				</div>
-				<p className='text-center text-sm md:text-left flex'>
+				{/* <p className='text-center text-sm md:text-left flex'>
 					<Link
 						href='https://twitter.com/fernandops26'
 						target='_blank'
@@ -46,7 +46,7 @@ export function Footer() {
 					>
 						<IconComponent name='github' className='w-5 h-5' />
 					</Link>
-				</p>
+				</p> */}
 			</div>
 		</footer>
 	);
