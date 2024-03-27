@@ -1,4 +1,4 @@
-export const AVAILABLE_MODELS = ['text-davinci-003', 'gpt-3.5-turbo'] as const;
+export const AVAILABLE_MODELS = ['gpt-4-0125-preview', 'gpt-4-1106-preview'] as const;
 
 export type AvailableModel = (typeof AVAILABLE_MODELS)[number];
 

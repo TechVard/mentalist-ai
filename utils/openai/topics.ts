@@ -1,7 +1,7 @@
 import { AvailableModel } from '../constants/openai';
 import { getClient } from './client';
 
-const CHAT_GPT_MODEL: AvailableModel = 'gpt-3.5-turbo';
+const CHAT_GPT_MODEL: AvailableModel = 'gpt-4-1106-preview';
 
 interface GenerateContentIdeasProps {
 	topic: string;
@@ -16,7 +16,7 @@ export const generateContentIdeas = async ({
 	topic,
 	context,
 	token,
-	model = 'text-davinci-003',
+	model = 'gpt-4-0125-preview',
 	accurateFor,
 	type,
 }: GenerateContentIdeasProps) => {

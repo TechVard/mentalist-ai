@@ -20,7 +20,7 @@ const ConfigurationContext = createContext<ConfigurationContextValue>({
 	token: '',
 	mode: undefined,
 
-	model: 'text-davinci-003',
+	model: 'gpt-4-0125-preview',
 	updateModel: () => {},
 	updateMode: () => {},
 });
@@ -31,7 +31,7 @@ interface ConfigurationProviderProps {
 
 export const ConfigurationProvider = ({ children }: ConfigurationProviderProps) => {
 	const [token, setToken] = useState<string>('');
-	const [model, setModel] = useState<AvailableModel>('text-davinci-003');
+	const [model, setModel] = useState<AvailableModel>('gpt-4-0125-preview');
 	const [mode, setMode] = useState<AvailableModes | undefined>();
 
 	useEffect(() => {
@@ -40,7 +40,7 @@ export const ConfigurationProvider = ({ children }: ConfigurationProviderProps) 
 
 		const defaultModel = getLocalConfigKey('model') ?? process.env.NEXT_PUBLIC_OPENAI_COMPLETION_MODEL!;
 
-		const model = isAvailableModel(defaultModel) ? defaultModel : 'text-davinci-003';
+		const model = isAvailableModel(defaultModel) ? defaultModel : 'gpt-4-0125-preview';
 
 		setModel(model);
 
